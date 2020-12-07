@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Read Me</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h2 id="s3-files-load-to-mysql-tables-using-airflow">S3 Files Load to MySQL Tables using Airflow:</h2>
+<h2 id="prerequisite">Prerequisite</h2>
+<ol>
+<li>MySQL Database.</li>
+<li>S3 Bucket</li>
+<li>Airflow Instance.</li>
+</ol>
+<h2 id="code-setup">Code Setup</h2>
+<ol>
+<li>Create the schema and table in MySQL</li>
+<li>Create below two connections,<br>
+a. aws_conn -&gt; AWS Connection Credentials<br>
+b. rds_mysql -&gt; MySQL RDS Credentials</li>
+<li>Place CSV files in the bucket under the path with pattern <strong>my_s3_bucket/yyyy/mm/dd/hh/mm/file</strong>.</li>
+<li>Update the s3 source location and MySQL schema-table info in the script.</li>
+<li>Place S3_Mysql_Load_Airflow.py in airflow dag folder and enable it in UI.</li>
+<li>Trigger the airflow dag or wait for the DAG to trigger (DAG is scheduled for every 1 hour)</li>
+</ol>
+</div>
+</body>
+
+</html>
